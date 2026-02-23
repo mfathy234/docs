@@ -94,7 +94,7 @@ Each document type has independent configuration:
 
   
 
-::: mermaid
+```mermaid
 
 flowchart TD
 
@@ -192,7 +192,7 @@ flowchart TD
 
     style AlwaysAllow fill:#ccffcc
 
-:::
+```
 
   
 
@@ -204,7 +204,7 @@ flowchart TD
 
   
 
-::: mermaid
+```mermaid
 
 flowchart LR
 
@@ -252,7 +252,7 @@ flowchart LR
 
     style ZATCA fill:#ccffcc
 
-:::
+```
 
   
 
@@ -264,7 +264,7 @@ flowchart LR
 
   
 
-::: mermaid
+```mermaid
 
 classDiagram
 
@@ -320,7 +320,7 @@ classDiagram
 
     Company "1" --> "*" DocumentBase
 
-:::
+```
 
   
 
@@ -332,7 +332,7 @@ classDiagram
 
   
 
-::: mermaid
+```mermaid
 
 flowchart TD
 
@@ -374,7 +374,7 @@ flowchart TD
 
     style Fallback fill:#fff4cc
 
-:::
+```
 
   
 
@@ -386,7 +386,7 @@ flowchart TD
 
   
 
-::: mermaid
+```mermaid
 
 flowchart TD
 
@@ -412,7 +412,7 @@ flowchart TD
 
     style End fill:#e1f5ff
 
-:::
+```
 
   
 
@@ -424,7 +424,7 @@ flowchart TD
 
   
 
-::: mermaid
+```mermaid
 
 flowchart TB
 
@@ -514,7 +514,7 @@ flowchart TB
 
     style ManualMode fill:#fff4cc
 
-:::
+```
 
   
 
@@ -526,7 +526,7 @@ flowchart TB
 
   
 
-::: mermaid
+```mermaid
 
 stateDiagram-v2
 
@@ -624,7 +624,7 @@ stateDiagram-v2
 
     end note
 
-:::
+```
 
   
 
@@ -636,7 +636,7 @@ stateDiagram-v2
 
   
 
-::: mermaid
+```mermaid
 
 flowchart LR
 
@@ -706,7 +706,7 @@ flowchart LR
 
     style VAN fill:#ffe1f0
 
-:::
+```
 
   
 
@@ -718,7 +718,7 @@ flowchart LR
 
   
 
-::: mermaid
+```mermaid
 
 flowchart TD
 
@@ -786,7 +786,7 @@ flowchart TD
 
     style AutoRetry fill:#e1ffe1
 
-:::
+```
 
   
 
@@ -798,7 +798,7 @@ flowchart TD
 
   
 
-::: mermaid
+```mermaid
 
 stateDiagram-v2
 
@@ -854,7 +854,7 @@ stateDiagram-v2
 
     end note
 
-:::
+```
 
   
 
@@ -866,7 +866,7 @@ stateDiagram-v2
 
   
 
-::: mermaid
+```mermaid
 
 classDiagram
 
@@ -888,7 +888,7 @@ classDiagram
 
     }
 
-:::
+```
 
   
 
@@ -900,7 +900,7 @@ classDiagram
 
   
 
-::: mermaid
+```mermaid
 
 sequenceDiagram
 
@@ -996,7 +996,7 @@ sequenceDiagram
 
     end
 
-:::
+```
 
   
 
@@ -1008,7 +1008,7 @@ sequenceDiagram
 
   
 
-::: mermaid
+```mermaid
 
 sequenceDiagram
 
@@ -1098,7 +1098,7 @@ sequenceDiagram
 
     end
 
-:::
+```
 
   
 
@@ -1110,7 +1110,7 @@ sequenceDiagram
 
   
 
-::: mermaid
+```mermaid
 
 sequenceDiagram
 
@@ -1198,7 +1198,7 @@ sequenceDiagram
 
     end
 
-:::
+```
 
   
 
@@ -1210,7 +1210,7 @@ sequenceDiagram
 
   
 
-::: mermaid
+```mermaid
 
 sequenceDiagram
 
@@ -1378,7 +1378,7 @@ sequenceDiagram
 
     end
 
-:::
+```
 
   
 

@@ -107,15 +107,11 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 <details> <summary> <strong>Get All Contracts</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of all contracts with filtering and sorting options.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of all employee contracts with advanced filtering, pagination, search, and sorting. Filter by contract code, employee information, dates, job position, department, manager, or work location. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Contracts/GetAll?SearchTerm={SearchTerm}&ContractCode={ContractCode}&EmployeeCode={EmployeeCode}&EmployeeName={EmployeeName}&ContractDateFrom={ContractDateFrom}&ContractDateTo={ContractDateTo}&ContractStartDateFrom={ContractStartDateFrom}&ContractStartDateTo={ContractStartDateTo}&JobPositionName={JobPositionName}&DepartmentName={DepartmentName}&DirectManagerName={DirectManagerName}&WorkLocationName={WorkLocationName}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -249,10 +245,8 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
     </tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -279,22 +273,17 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Get Contract By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve detailed contract information by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve all the information about a contract using the contract id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Contracts/GetById?Id={Id}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -323,10 +312,8 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
     </tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -398,22 +385,17 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>View Contract By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve optimized contract information by id using SQL view.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve contract information using optimized SQL view with all related entity names (returns both Arabic and English names, selected based on current language). <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Contracts/ViewById?Id={Id}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -442,10 +424,8 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
     </tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -514,22 +494,17 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Add Contract</strong>
 <br /> <span style="font-size: 90%;">Create a new employee contract.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Add a new contract for an employee by providing contract details, duration, and job position. <br /><br />
-
 <span style="background-color:#28a745; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/Contracts/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <p>The request body must be sent in JSON format, containing contract metadata, employment details, and job position information.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
@@ -569,31 +544,24 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 </pre>
 </div>
 <p><strong>Required:</strong> Both <code>position</code> and <code>salary</code> are required. Each contract must have exactly one position and one salary. <code>contractSalaryItems</code> must contain at least one item with <code>value</code> &gt; 0 and a valid <code>salaryTemplateItemId</code>. See <em>Validations and required data</em> above.</p>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>201 Created</strong> with the newly created contract ID (GUID) in the response body.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>"988a8ae5-4044-494c-3075-08de30d9bd48"</pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Edit Contract</strong>
 <br /> <span style="font-size: 90%;">Update an existing contract record.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update an existing contract with all contract details, position, and salary information. <br /><br />
-
 <span style="background-color:#007bff; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/Contracts/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -636,28 +604,21 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 </pre>
 </div>
 <p>Same validation rules as Add Contract. <code>id</code> and <code>rowVersion</code> are required for the contract; position and salary remain required with at least one salary item.</p>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>204 No Content</strong> on successful update.</p>
-
 </div>
 </details>
 
 <details> <summary> <strong>Renew Contract</strong>
 <br /> <span style="font-size: 90%;">Renew an existing contract with new duration and dates.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Renew an existing contract by creating a new contract record with updated duration and start date. <br /><br />
-
 <span style="background-color:#28a745; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/Contracts/Renew
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -670,31 +631,24 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 }
 </pre>
 </div>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>201 Created</strong> with the newly created contract ID (GUID) in the response body.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>"c00cdeeb-0698-41e7-f687-08de30d60e6b"</pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Upgrade Contract</strong>
 <br /> <span style="font-size: 90%;">Upgrade an existing contract with new position or salary.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Upgrade an existing contract by creating new position or salary records with updated information. <br /><br />
-
 <span style="background-color:#28a745; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/Contracts/Upgrade
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -729,12 +683,9 @@ At least one of **Salary** or **Position** must be sent. Each part sent is valid
 </pre>
 </div>
 <p>At least one of <code>salary</code> or <code>position</code> is required. Contract must be <strong>Active</strong>. <code>startDate</code> must be ≥ <code>lastRecordEndDate</code>. Position does not use <code>reportToId</code>. Salary items use only <code>value</code> and <code>salaryTemplateItemId</code> (no <code>itemType</code>). See <em>Validations and required data → Upgrade Contract</em>.</p>
-
 <br />
 <hr />
-
             <h3>Response</h3>
             <p>Returns <strong>204 No Content</strong> when the contract is successfully upgraded.</p>
-
 </div>
 </details>

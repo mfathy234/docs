@@ -7,15 +7,11 @@
 <details> <summary> <strong>Get All Jobs</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of jobs with search and sorting.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of jobs with pagination, search, and sorting. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Jobs/GetAll?SearchTerm={SearchTerm}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -36,10 +32,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -68,21 +62,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Job By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve job details by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve detailed job information using the id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Jobs/GetById?Id={JobId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -99,10 +88,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -120,25 +107,19 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Add Job</strong>
 <br /> <span style="font-size: 90%;">Create a new job.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new job by providing job names and details. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/Jobs/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <p>The request body must be sent in JSON format with job names and descriptions.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "nameAr": "???? ????",
@@ -149,34 +130,26 @@
   "requiredSkills": "Agile, Scrum, JIRA"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <p>A successful creation returns the newly created job ID:</p>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 "a1b2c3d4-5678-9012-3456-789012345678"
-</div> </details>
+</div> </div></details>
  
 <details> <summary> <strong>Edit Job</strong>
 <br /> <span style="font-size: 90%;">Update an existing job.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update job details such as names and descriptions. <br /><br />
-
 <span style="background-color:#fff3e0; color:#e65100; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/Jobs/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <p>Provide the job id, row version, names, and other details to update.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "b2d5f9f3-1234-4a5b-89cd-0123456789ab",
@@ -190,12 +163,9 @@
   "requiredSkills": "C#, .NET, Microservices, Docker"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful update.</p>
 </div> </details>
@@ -203,15 +173,11 @@
 <details> <summary> <strong>Delete Job</strong>
 <br /> <span style="font-size: 90%;">Delete a job by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete a job using its id. <br /><br />
-
 <span style="background-color:#ffebee; color:#c62828; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/Jobs/Delete?Id={JobId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -228,10 +194,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful deletion.</p>
 </div> </details>

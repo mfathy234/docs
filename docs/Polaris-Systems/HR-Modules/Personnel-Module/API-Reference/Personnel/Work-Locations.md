@@ -2,15 +2,11 @@
 <details> <summary> <strong>Get All Work Locations</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of work locations with search and sorting.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of work locations with pagination, search, and sorting. Search filters by work area name, work area code, or responsible employee name (Arabic/English). <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/WorkLocations/GetAll?SearchTerm={SearchTerm}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -31,10 +27,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -50,7 +44,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -81,21 +74,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Work Location By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve work location details by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve detailed work location information using the id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/WorkLocations/GetById?Id={WorkLocationId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -112,10 +100,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -131,7 +117,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -147,21 +132,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Add Work Location</strong>
 <br /> <span style="font-size: 90%;">Create a new work location.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new work location by providing area name, coordinates, and optional responsible employee. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/WorkLocations/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -181,10 +161,8 @@
     <tr><td>ResponsibleEmployeeId</td><td>guid</td><td>-</td><td>-</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format with location name, coordinates, error range, and responsible employee if any.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "workAreaName": "Headquarters",
@@ -194,12 +172,9 @@
   "responsibleEmployeeId": "c2f07af1-367e-4a3a-8cf9-90df3e0c4bae"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -215,25 +190,20 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p>A successful creation returns the newly created work location ID:</p>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 "71fd0c49-3b3c-4f43-96e1-9c3c9a71f4b2"
-</div> </details>
+</div> </div></details>
  
 <details> <summary> <strong>Edit Work Location</strong>
 <br /> <span style="font-size: 90%;">Update an existing work location.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update work location details including coordinates and code. <br /><br />
-
 <span style="background-color:#fff3e0; color:#e65100; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/WorkLocations/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -256,10 +226,8 @@
     <tr><td>ResponsibleEmployeeId</td><td>guid</td><td>-</td><td>-</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>Provide the work location id, row version, name, code, coordinates, error range, and responsible employee.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "71fd0c49-3b3c-4f43-96e1-9c3c9a71f4b2",
@@ -272,12 +240,9 @@
   "responsibleEmployeeId": "c2f07af1-367e-4a3a-8cf9-90df3e0c4bae"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -293,7 +258,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful update.</p>
 </div> </details>
@@ -301,15 +265,11 @@
 <details> <summary> <strong>Delete Work Location</strong>
 <br /> <span style="font-size: 90%;">Delete a work location by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete a work location using its id. <br /><br />
-
 <span style="background-color:#ffebee; color:#c62828; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/WorkLocations/Delete?Id={WorkLocationId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -326,10 +286,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -345,7 +303,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful deletion.</p>
 </div> </details>

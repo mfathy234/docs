@@ -2,15 +2,11 @@
 <details> <summary> <strong>Get All Employment Commencements</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of employment commencements with search and filtering.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of employment commencements with pagination, search, filtering by employee, date range, and sorting. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/EmploymentCommencements/GetAll?SearchTerm={SearchTerm}&EmployeeId={EmployeeId}&DateFrom={DateFrom}&DateTo={DateTo}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -34,10 +30,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -53,7 +47,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -86,21 +79,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Employment Commencement By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve employment commencement details by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve detailed employment commencement information using the commencement id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/EmploymentCommencements/GetById?Id={CommencementId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -117,10 +105,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -136,7 +122,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -153,21 +138,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Add Employment Commencement</strong>
 <br /> <span style="font-size: 90%;">Create a new employment commencement.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new employment commencement record. The status will be automatically set to Draft. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/EmploymentCommencements/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -186,10 +166,8 @@
     <tr><td>Notes</td><td>string</td><td>500</td><td>Max length when provided</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format with employment commencement details.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "date": "2024-01-15",
@@ -198,12 +176,9 @@
   "notes": "First employment commencement for this employee"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -219,25 +194,20 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p>A successful creation returns the newly created employment commencement ID:</p>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 "7f8a1d22-3b4a-4c5d-8e9f-0a1b2c3d4e5f"
-</div> </details>
+</div> </div></details>
  
 <details> <summary> <strong>Edit Employment Commencement</strong>
 <br /> <span style="font-size: 90%;">Update an existing employment commencement.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update employment commencement details. <strong>Note:</strong> Only records with Draft status can be edited. Posted records cannot be modified. <br /><br />
-
 <span style="background-color:#fff3e0; color:#e65100; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/EmploymentCommencements/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -259,10 +229,8 @@
     <tr><td>Notes</td><td>string</td><td>500</td><td>Max length when provided</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>Provide the employment commencement id, row version (for concurrency), code, date, employee, commencement type, and optional notes.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "7f8a1d22-3b4a-4c5d-8e9f-0a1b2c3d4e5f",
@@ -274,12 +242,9 @@
   "notes": "Updated notes"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -295,7 +260,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful update.</p>
 </div> </details>
@@ -303,15 +267,11 @@
 <details> <summary> <strong>Post Employment Commencement</strong>
 <br /> <span style="font-size: 90%;">Post employment commencement status from Draft to Posted.</span> </summary> 
 <br />
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Change the status of an employment commencement from Draft to Posted. <strong>Note:</strong> Only records with Draft status can be posted. Once posted, the record cannot be edited or deleted. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/EmploymentCommencements/Post
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -326,21 +286,16 @@
     <tr><td>Id</td><td>guid</td><td>Not empty</td><td>Yes</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format with the employment commencement id.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "7f8a1d22-3b4a-4c5d-8e9f-0a1b2c3d4e5f"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -356,7 +311,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful post.</p>
 </div> </details>
@@ -364,15 +318,11 @@
 <details> <summary> <strong>Delete Employment Commencement</strong>
 <br /> <span style="font-size: 90%;">Delete an employment commencement by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete an employment commencement using its id. <strong>Note:</strong> Only records with Draft status can be deleted. Posted records cannot be deleted. <br /><br />
-
 <span style="background-color:#ffebee; color:#c62828; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/EmploymentCommencements/Delete?Id={CommencementId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -389,10 +339,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -408,7 +356,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful deletion.</p>
 </div> </details>

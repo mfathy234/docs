@@ -5,15 +5,11 @@ API for loan requests: list (paginated, filter by employee, date range, status),
 <details> <summary> <strong>Get All Loan Requests</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of loan requests with filtering and sorting options.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of loan requests with pagination, search, filtering by employee, date range, and status, with sorting capabilities. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/LoanRequests/GetAll?SearchTerm={SearchTerm}&EmployeeId={EmployeeId}&DateFrom={DateFrom}&DateTo={DateTo}&Status={Status}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -38,10 +34,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -57,7 +51,6 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -85,21 +78,16 @@ API for loan requests: list (paginated, filter by employee, date range, status),
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Loan Request By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve detailed loan request information by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve complete loan request details including all properties and attachments. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/LoanRequests/GetById?Id={LoanRequestId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -116,10 +104,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -135,7 +121,6 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p><code>date</code> and <code>firstInstallmentDueDate</code> are returned as date strings (YYYY-MM-DD). <code>attachments</code> is a list of attachment IDs.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
@@ -157,21 +142,16 @@ API for loan requests: list (paginated, filter by employee, date range, status),
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Managed Employees</strong>
 <br /> <span style="font-size: 90%;">Retrieve list of employees managed by the current employee.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Get a list of employees that are managed by the specified manager, including their names, IDs, and current salaries. This is used when selecting an employee for a loan request to validate business rules. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/LoanRequests/GetManagedEmployees?ManagerId={ManagerId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -188,10 +168,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -207,7 +185,6 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -227,28 +204,22 @@ API for loan requests: list (paginated, filter by employee, date range, status),
 ]
 </pre>
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li>Uses stored procedure <code>Hr.GetManagedEmployees</code> to retrieve the employee hierarchy.</li>
   <li>Returns employees that report directly or indirectly to the specified manager.</li>
   <li>Current salary is retrieved from the employee's active contract.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Get Employee Salary Data</strong>
 <br /> <span style="font-size: 90%;">Retrieve salary and advance balance data for an employee for loan request flows.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Get previous advance balance, current salary, and available amount for an employee. Data is read from stored procedure <code>Hr.GetEmployeeSalaryData</code>. Used when creating or validating loan requests to show salary context and remaining available amount. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/LoanRequests/GetEmployeeSalaryData?employeeId={EmployeeId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -265,10 +236,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -285,7 +254,6 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response body (200 OK)</h3>
 <table>
   <thead>
@@ -301,7 +269,6 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>availableAmount</td><td>decimal</td><td>Current salary minus previous advance balance.</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -312,7 +279,6 @@ API for loan requests: list (paginated, filter by employee, date range, status),
 }
 </pre>
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li>Uses stored procedure <code>Hr.GetEmployeeSalaryData</code>.</li>
@@ -320,21 +286,16 @@ API for loan requests: list (paginated, filter by employee, date range, status),
   <li>Previous advance balance is the sum of unpaid installments (InstallmentAmount − PaidAmount) for active employee loans.</li>
   <li>Available amount = CurrentSalary − PreviousAdvanceBalance.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Add Loan Request</strong>
 <br /> <span style="font-size: 90%;">Create a new loan request.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new loan request with automatic code generation, business rule validation, and attachment handling. The loan request is created with status "Draft". <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/LoanRequests/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -358,10 +319,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>Attachments</td><td>List&lt;string&gt;?</td><td>-</td><td>Optional list of attachment IDs</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format. Date fields use YYYY-MM-DD.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "date": "2024-01-15",
@@ -378,12 +337,9 @@ API for loan requests: list (paginated, filter by employee, date range, status),
   ]
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -399,13 +355,11 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p>Returns <strong>201 Created</strong> with the newly created loan request ID (GUID string) in the response body. The <code>Location</code> header may point to the created resource.</p>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 "11111111-1111-1111-1111-111111111111"
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Code Generation</strong>: Automatically generated using sequence service.</li>
@@ -417,21 +371,16 @@ API for loan requests: list (paginated, filter by employee, date range, status),
   <li><strong>Employee Contract</strong>: Employee must have an active contract. Throws <code>EmployeeHasnotContract</code> if not found.</li>
   <li><strong>Attachments</strong>: Attachment IDs are confirmed via attachment service before being associated with the loan request.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Edit Loan Request</strong>
 <br /> <span style="font-size: 90%;">Update an existing loan request.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update an existing loan request. Only loan requests with status "Draft" can be edited. Posted loan requests cannot be modified. <br /><br />
-
 <span style="background-color:#fff3e0; color:#e65100; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/LoanRequests/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -458,10 +407,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>Attachments</td><td>List&lt;string&gt;?</td><td>-</td><td>Optional list of attachment IDs</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>Provide id, code, row version (from Get By Id), and all loan request details. Attachments can be updated by providing a new list of attachment IDs.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "11111111-1111-1111-1111-111111111111",
@@ -478,12 +425,9 @@ API for loan requests: list (paginated, filter by employee, date range, status),
   "attachments": ["attachment-id-1", "attachment-id-3"]
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -499,10 +443,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful update.</p>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Status Check</strong>: Only loan requests with status "Draft" can be edited. Throws <code>CantEditOrDeletePostedRecord</code> exception if status is "Posted".</li>
@@ -514,21 +456,16 @@ API for loan requests: list (paginated, filter by employee, date range, status),
   <li><strong>Attachments</strong>: New attachments are confirmed via attachment service. Removed attachments are soft-deleted.</li>
   <li><strong>Concurrency</strong>: Provide <code>RowVersion</code> from Get By Id for optimistic concurrency when updating.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Post Loan Request</strong>
 <br /> <span style="font-size: 90%;">Change loan request status from Draft to Posted.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Post a loan request, changing its status from "Draft" to "Posted". Once posted, the loan request cannot be edited or deleted. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/LoanRequests/Post
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -543,21 +480,16 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>Id</td><td>guid</td><td>Not empty, must exist</td><td>Yes</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "11111111-1111-1111-1111-111111111111"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -573,31 +505,24 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful posting.</p>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Status Check</strong>: Only loan requests with status "Draft" can be posted.</li>
   <li><strong>Status Change</strong>: Changes status from "Draft" to "Posted".</li>
   <li><strong>Immutability</strong>: Once posted, the loan request cannot be edited or deleted.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Delete Loan Request</strong>
 <br /> <span style="font-size: 90%;">Delete a loan request by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete a loan request using its id. Only loan requests with status "Draft" can be deleted. Posted loan requests cannot be deleted. <br /><br />
-
 <span style="background-color:#ffebee; color:#c62828; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/LoanRequests/Delete?Id={LoanRequestId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -614,10 +539,8 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -633,15 +556,12 @@ API for loan requests: list (paginated, filter by employee, date range, status),
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful deletion. If the loan request does not exist or is already Posted, the API returns an error.</p>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Status Check</strong>: Only loan requests with status "Draft" can be deleted. Throws <code>CantEditOrDeletePostedRecord</code> (or similar) if status is "Posted".</li>
   <li><strong>Soft Delete</strong>: Performs a soft delete (e.g. <code>IsDeleted = true</code>, <code>IsActive = false</code>).</li>
 </ul>
-
 </div> </details>
 

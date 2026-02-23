@@ -5,15 +5,11 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
 <details> <summary> <strong>Get All Loan Types</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of loan types with search and sorting.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of loan types with pagination, search, and sorting. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/LoanTypes/GetAll?SearchTerm={SearchTerm}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -34,10 +30,8 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -53,7 +47,6 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p>The list returns a summary per loan type. <code>name</code> is locale-based (Arabic or English).</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
@@ -91,21 +84,16 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Loan Type By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve loan type details by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve detailed loan type information using the id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/LoanTypes/GetById?Id={LoanTypeId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -122,10 +110,8 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -141,7 +127,6 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -166,21 +151,16 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
 </pre>
 </div>
 <p><code>requestDayFrom</code> and <code>requestDayTo</code> are returned as date strings (YYYY-MM-DD).</p>
-
 </div> </details>
  
 <details> <summary> <strong>Add Loan Type</strong>
 <br /> <span style="font-size: 90%;">Create a new loan type.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new loan type by providing Arabic/English names, salary item reference, and rule configuration flags (relocation, percent from salary, request window, max installments). Code is automatically generated. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/LoanTypes/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -208,11 +188,9 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>MaxInstallments</td><td>int?</td><td>-</td><td>&gt; 0 when enabled</td><td>Conditional</td></tr>
   </tbody>
 </table>
-
 <h3>Request Body Example</h3>
 <p>The request body must be sent in JSON format with multilingual names, salary item reference, and rule settings. Code is automatically generated via the sequence service.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "nameEn": "Housing Loan",
@@ -230,12 +208,9 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
   "maxInstallments": 18
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -251,13 +226,11 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p>Returns <strong>201 Created</strong> with the newly created loan type ID in the response body (GUID string). The <code>Location</code> header may point to the created resource.</p>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 "8a3d55a4-3f7e-4f51-9c2d-333333333333"
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Code Generation</strong>: Automatically generated using sequence service.</li>
@@ -268,21 +241,16 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
   <li><strong>Request Range</strong>: If <code>IsRequestRangeEnabled</code> is true, both <code>RequestDayFrom</code> and <code>RequestDayTo</code> are required (date strings YYYY-MM-DD), and <code>RequestDayFrom</code> must be less than or equal to <code>RequestDayTo</code>.</li>
   <li><strong>Max Installments</strong>: If <code>IsMaxInstallmentsEnabled</code> is true, <code>MaxInstallments</code> must be greater than 0.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Edit Loan Type</strong>
 <br /> <span style="font-size: 90%;">Update an existing loan type.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update loan type fields including names, salary item reference, and rule configuration values. <br /><br />
-
 <span style="background-color:#fff3e0; color:#e65100; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/LoanTypes/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -313,11 +281,9 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>MaxInstallments</td><td>int?</td><td>-</td><td>&gt; 0 when enabled</td><td>Conditional</td></tr>
   </tbody>
 </table>
-
 <h3>Request Body Example</h3>
 <p>Provide the loan type id, row version, code, multilingual names, salary item reference, and rule settings.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "4f7a1c1b-46f7-43d8-8e16-111111111111",
@@ -338,12 +304,9 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
   "maxInstallments": 12
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -359,10 +322,8 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful update.</p>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Salary Item</strong>: Must reference an existing salary item. The salary item is used to post loan installments.</li>
@@ -373,21 +334,16 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
   <li><strong>Max Installments</strong>: If <code>IsMaxInstallmentsEnabled</code> is true, <code>MaxInstallments</code> must be greater than 0.</li>
   <li><strong>Concurrency</strong>: <code>RowVersion</code> is required for optimistic concurrency; return the value from Get By Id when editing.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Delete Loan Type</strong>
 <br /> <span style="font-size: 90%;">Delete a loan type by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete a loan type using its id. <br /><br />
-
 <span style="background-color:#ffebee; color:#c62828; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/LoanTypes/Delete?Id={LoanTypeId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -404,10 +360,8 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -423,7 +377,6 @@ API for managing loan types: list (paginated), get by id, add, edit, and delete.
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful deletion. If the loan type does not exist, the API returns an error (e.g. 400/404).</p>
 </div> </details>

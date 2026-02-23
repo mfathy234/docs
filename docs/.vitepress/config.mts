@@ -72,6 +72,16 @@ export default withMermaid(
     // Suppress dead links from .md files that reference code-repo files (READMEs, etc.)
     ignoreDeadLinks: true,
 
+    vue: {
+      template: {
+        compilerOptions: {
+          // Treat <details> and <summary> as custom elements so Vue's strict
+          // HTML5 parser doesn't enforce nesting rules that break wiki-imported files.
+          isCustomElement: (tag) => tag === 'details' || tag === 'summary',
+        },
+      },
+    },
+
     head: [
       ['link', { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon-192.png' }],
       ['link', { rel: 'apple-touch-icon', sizes: '192x192', href: '/favicon-192.png' }],
@@ -160,7 +170,7 @@ export default withMermaid(
           if (!state.src.includes('<details')) return
           state.src = state.src.replace(
             /<details[\s\S]*?<\/details\s*>/g,
-            (match) => match.replace(/\n[ \t]*\n/g, '\n')
+            (match) => match.replace(/(\r?\n)([ \t]*)\r?\n/g, '$1')
           )
         })
       },

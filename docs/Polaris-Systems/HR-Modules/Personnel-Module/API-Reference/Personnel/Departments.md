@@ -2,15 +2,11 @@
 <details> <summary> <strong>Get All Departments</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of departments with search and sorting.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of departments with pagination, search, and sorting. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Departments/GetAll?SearchTerm={SearchTerm}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -31,10 +27,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -50,7 +44,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -87,21 +80,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Employees Of Department</strong>
 <br /> <span style="font-size: 90%;">Retrieve employees for a specific department.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve employees assigned to a department by department id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Departments/GetEmployeesOfDepartment?DepartmentId={DepartmentId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -118,10 +106,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -137,7 +123,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -161,27 +146,20 @@
 ]
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get All Departments For Menu</strong>
 <br /> <span style="font-size: 90%;">Retrieve all departments for menu selection.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve lightweight department list for menu/dropdown use. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Departments/GetAllForMenu
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <p>No parameters required.</p>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -197,7 +175,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -219,21 +196,16 @@
 ]
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Department By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve department details by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve detailed department information using the department id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Departments/GetById?Id={DepartmentId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -250,10 +222,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -269,7 +239,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -286,21 +255,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>View Department</strong>
 <br /> <span style="font-size: 90%;">View department summary details.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> View summarized department information using the department id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Departments/View?Id={DepartmentId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -317,10 +281,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -336,7 +298,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -351,21 +312,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Add Department</strong>
 <br /> <span style="font-size: 90%;">Create a new department.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new department by providing department names, responsible employee, and hierarchy information. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/Departments/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -386,10 +342,8 @@
     <tr><td>ParentIsCompany</td><td>bool</td><td>-</td><td>-</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format with department names, responsible employee id, and parent hierarchy details.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "nameAr": "HR Department AR",
@@ -400,12 +354,9 @@
   "parentIsCompany": true
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -421,25 +372,20 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p>A successful creation returns the newly created department ID:</p>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 "b2d5f9f3-1234-4a5b-89cd-0123456789ab"
-</div> </details>
+</div> </div></details>
  
 <details> <summary> <strong>Edit Department</strong>
 <br /> <span style="font-size: 90%;">Update an existing department.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update department details such as names, responsible employee, and hierarchy. <br /><br />
-
 <span style="background-color:#fff3e0; color:#e65100; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/Departments/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -462,10 +408,8 @@
     <tr><td>ParentId</td><td>guid</td><td>-</td><td>Required</td><td>Yes</td></tr>
   </tbody>
 </table>
-
 <p>Provide the department id, row version, names, responsible employee, and parent data.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "d11c8a52-4c23-4c2b-8e16-02b6d4fce2c5",
@@ -478,12 +422,9 @@
   "parentId": "00000000-0000-0000-0000-000000000000"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -499,7 +440,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful update.</p>
 </div> </details>
@@ -507,15 +447,11 @@
 <details> <summary> <strong>Delete Department</strong>
 <br /> <span style="font-size: 90%;">Delete a department by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete a department using its id. <br /><br />
-
 <span style="background-color:#ffebee; color:#c62828; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/Departments/Delete?Id={DepartmentId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -532,10 +468,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -551,7 +485,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful deletion.</p>
 </div> </details>

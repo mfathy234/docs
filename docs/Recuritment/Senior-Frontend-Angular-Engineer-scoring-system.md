@@ -99,7 +99,7 @@
     <th>8</th>
   </tr>
   <tr>
-    <td><B>Default Strategy</b> Runs change detection for the entire component tree whenever any event occurs (click, HTTP response, timer, input, etc.)/td>
+    <td><B>Default Strategy</b> Runs change detection for the entire component tree whenever any event occurs (click, HTTP response, timer, input, etc.)</td>
     <td>1</td>
   </tr>
   <tr>

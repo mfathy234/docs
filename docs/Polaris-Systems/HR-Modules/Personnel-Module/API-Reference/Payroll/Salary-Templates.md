@@ -3,15 +3,11 @@
 <details> <summary> <strong>Get All Salary Templates</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of salary templates with search and sorting.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of salary templates with pagination, search, and sorting. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/SalaryTemplates/GetAll?SearchTerm={SearchTerm}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -32,10 +28,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -66,22 +60,17 @@
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Get Salary Template By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve salary template details by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve detailed salary template information using the id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/SalaryTemplates/GetById?Id={Id}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -98,10 +87,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -129,22 +116,17 @@
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Get All Items By Template Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve all salary template items for a specific template.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of all salary template items associated with a specific template. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/SalaryTemplates/GetAllItemsByTepmlateId?SalaryTemplateId={SalaryTemplateId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -161,10 +143,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -182,22 +162,17 @@
 ]
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Add Salary Template</strong>
 <br /> <span style="font-size: 90%;">Create a new salary template with payment frequency and items.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new salary template by providing multilingual names, payment frequency, and optional template items. <br /><br />
-
 <span style="background-color:#28a745; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/SalaryTemplates/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -220,10 +195,8 @@
 }
 </pre>
 </div>
-
 <br />
 <hr />
-
 <h3>Request Body Properties</h3>
 <table>
   <thead>
@@ -242,7 +215,6 @@
     <tr><td>SalaryTemplateItems</td><td>array</td><td>No</td><td>Optional collection of salary template items.</td></tr>
   </tbody>
 </table>
-
 <h4>SalaryTemplateItem Properties (Add)</h4>
 <table>
   <thead>
@@ -263,31 +235,24 @@
     <tr><td>SalaryItemId</td><td>guid</td><td>Yes</td><td>Identifier of the salary item.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>201 Created</strong> with the newly created salary template ID (GUID) in the response body.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>"11111111-1111-1111-1111-111111111111"</pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Edit Salary Template</strong>
 <br /> <span style="font-size: 90%;">Update an existing salary template with full collection management.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update salary template code, names, frequency, description, and items. The system automatically manages the collection: items with an <code>Id</code> are updated, items without an <code>Id</code> are added as new, and items not included in the request are removed. <br /><br />
-
 <span style="background-color:#007bff; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/SalaryTemplates/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -325,10 +290,8 @@
 }
 </pre>
 </div>
-
 <br />
 <hr />
-
 <h3>Request Body Properties</h3>
 <table>
   <thead>
@@ -350,7 +313,6 @@
     <tr><td>SalaryTemplateItems</td><td>array</td><td>No</td><td>Optional collection of salary template items.</td></tr>
   </tbody>
 </table>
-
 <h4>SalaryTemplateItem Properties (Edit)</h4>
 <table>
   <thead>
@@ -373,10 +335,8 @@
     <tr><td>SalaryItemId</td><td>guid</td><td>Yes</td><td>Identifier of the salary item.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Collection Update Behavior</h3>
 <p>The system automatically manages the <code>SalaryTemplateItems</code> collection:</p>
 <ul>
@@ -385,28 +345,21 @@
   <li><strong>Delete:</strong> Items that exist in the database but are not included in the request are removed.</li>
 </ul>
 <p><strong>Note:</strong> Duplicate <code>SalaryItemId</code> values are automatically deduplicated (only the first occurrence is kept).</p>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>204 No Content</strong> on successful update.</p>
-
 </div>
 </details>
 
 <details> <summary> <strong>Delete Salary Template</strong>
 <br /> <span style="font-size: 90%;">Delete a salary template by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete a salary template using its id. <br /><br />
-
 <span style="background-color:#dc3545; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/SalaryTemplates/Delete?Id={Id}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -423,28 +376,21 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>204 No Content</strong> on successful deletion.</p>
-
 </div>
 </details>
 
 <details> <summary> <strong>Calculate Salary Template Item</strong>
 <br /> <span style="font-size: 90%;">Calculate the value of a calculated salary template item.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Calculate the value of a calculated salary template item based on its formula and the current list of items. <br /><br />
-
 <span style="background-color:#28a745; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/SalaryTemplates/Calculate
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -467,10 +413,8 @@
 }
 </pre>
 </div>
-
 <br />
 <hr />
-
 <h3>Request Body Properties</h3>
 <table>
   <thead>
@@ -486,7 +430,6 @@
     <tr><td>CurrentList</td><td>array</td><td>Yes</td><td>List of current salary template items with their values.</td></tr>
   </tbody>
 </table>
-
 <h4>CurrentList Item Properties</h4>
 <table>
   <thead>
@@ -504,10 +447,8 @@
     <tr><td>IsCalculated</td><td>bool</td><td>Yes</td><td>Whether the item is calculated.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -536,6 +477,5 @@
 }
 </pre>
 </div>
-
 </div>
 </details>

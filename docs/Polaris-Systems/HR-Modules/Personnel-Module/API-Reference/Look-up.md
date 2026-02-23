@@ -3,15 +3,11 @@
 <details> <summary> <strong>Get Lookup List</strong>
 <br /> <span style="font-size: 90%;">Retrieve lookup values (tables and enums) by type.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Fetch lookup entries for dropdowns and selectors. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Lookup/GetList?Lookup={Lookup}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -40,12 +36,9 @@
     </tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Available Lookup Types</h3>
-
 <h4>Table Lookups</h4>
 <p>The following lookups return data from database tables:</p>
 <ul>
@@ -65,7 +58,6 @@
   <li><strong>SalariesItems</strong> - List of salary items (includes salaryUnitId)</li>
   <li><strong>LoanRequests</strong> - List of loan requests</li>
 </ul>
-
 <h4>Enum Lookups</h4>
 <p>The following lookups return enum values with localized names:</p>
 <ul>
@@ -84,10 +76,8 @@
   <li><strong>SalaryItemTypes</strong> - Salary item type options</li>
   <li><strong>LoanSources</strong> - Loan source options</li>
 </ul>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -115,12 +105,9 @@
     </tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Examples</h3>
-
 <h4>Table Lookup Example (Countries)</h4>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -138,7 +125,6 @@
 ]
 </pre>
 </div>
-
 <h4>Enum Lookup Example (Gender)</h4>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -154,10 +140,8 @@
 ]
 </pre>
 </div>
-
 <br />
 <hr />
-
 <h3>Response Notes</h3>
 <ul>
   <li><strong>Enum lookups</strong> return items with string <code>id</code> (enum name) and localized <code>name</code> (based on current language).</li>
@@ -165,14 +149,10 @@
   <li><strong>Countries</strong> lookup also includes <code>phoneCode</code> field.</li>
   <li><strong>SalariesItems</strong> lookup also includes <code>salaryUnitId</code> field.</li>
 </ul>
-
 <br />
 <hr />
-
 <h3>Enum Values Reference</h3>
-
 <p>The following sections list all enum values that can be returned by enum lookups. The <code>id</code> field in the response will be the enum name (e.g., "Male", "Monthly"), and the <code>name</code> field will be the localized name based on the current language.</p>
-
 <h4>Gender</h4>
 <table>
   <thead>
@@ -188,7 +168,6 @@
     <tr><td>Female = 2</td><td>"Female"</td><td>"أنثى"</td><td>"Female"</td></tr>
   </tbody>
 </table>
-
 <h4>Religions</h4>
 <table>
   <thead>
@@ -205,7 +184,6 @@
     <tr><td>Other = 3</td><td>"Other"</td><td>"أخرى"</td><td>"Other"</td></tr>
   </tbody>
 </table>
-
 <h4>BloodTypes</h4>
 <table>
   <thead>
@@ -226,7 +204,6 @@
     <tr><td>ONegative</td><td>"ONegative"</td><td>"O-"</td></tr>
   </tbody>
 </table>
-
 <h4>RenewalTypes</h4>
 <table>
   <thead>
@@ -243,7 +220,6 @@
     <tr><td>NotRenewable = 3</td><td>"NotRenewable"</td><td>"غير قابل للتجديد"</td><td>"Not Renewable"</td></tr>
   </tbody>
 </table>
-
 <h4>ContractTypes</h4>
 <table>
   <thead>
@@ -260,7 +236,6 @@
     <tr><td>Internship = 3</td><td>"Internship"</td><td>"تدريب"</td><td>"Internship"</td></tr>
   </tbody>
 </table>
-
 <h4>MaritalStatus</h4>
 <table>
   <thead>
@@ -278,7 +253,6 @@
     <tr><td>Widower = 4</td><td>"Widower"</td><td>"أرمل"</td><td>"Widower"</td></tr>
   </tbody>
 </table>
-
 <h4>ContractStatus</h4>
 <table>
   <thead>
@@ -295,7 +269,6 @@
     <tr><td>Closed</td><td>"Closed"</td><td>"مغلق"</td><td>"Closed"</td></tr>
   </tbody>
 </table>
-
 <h4>RelationshipTypes</h4>
 <table>
   <thead>
@@ -316,7 +289,6 @@
     <tr><td>Sister = 7</td><td>"Sister"</td><td>"أخت"</td><td>"Sister"</td></tr>
   </tbody>
 </table>
-
 <h4>PaymentFrequencies</h4>
 <table>
   <thead>
@@ -332,7 +304,6 @@
     <tr><td>Yearly = 2</td><td>"Yearly"</td><td>"سنوي"</td><td>"Yearly"</td></tr>
   </tbody>
 </table>
-
 <h4>PaymentMethods</h4>
 <table>
   <thead>
@@ -352,7 +323,6 @@
     <tr><td>MobileWallet = 6</td><td>"MobileWallet"</td><td>"محفظة إلكترونية"</td><td>"Mobile Wallet"</td></tr>
   </tbody>
 </table>
-
 <h4>LoanCalculationTypes</h4>
 <table>
   <thead>
@@ -368,7 +338,6 @@
     <tr><td>Monthly = 2</td><td>"Monthly"</td><td>"شهرى"</td><td>"Monthly"</td></tr>
   </tbody>
 </table>
-
 <h4>CommencementTypes</h4>
 <table>
   <thead>
@@ -384,7 +353,6 @@
     <tr><td>ReturnFromLeave = 2</td><td>"ReturnFromLeave"</td><td>"عودة من إجازة"</td><td>"Return From Leave"</td></tr>
   </tbody>
 </table>
-
 <h4>SalaryItemTypes</h4>
 <table>
   <thead>
@@ -400,7 +368,6 @@
     <tr><td>Deduction = 2</td><td>"Deduction"</td><td>"استقطاع"</td><td>"Deduction"</td></tr>
   </tbody>
 </table>
-
 <h4>LoanSources</h4>
 <table>
   <thead>
@@ -416,6 +383,5 @@
     <tr><td>FromRequest = 2</td><td>"FromRequest"</td><td>"من طلب"</td><td>"From Request"</td></tr>
   </tbody>
 </table>
-
 </div>
 </details>

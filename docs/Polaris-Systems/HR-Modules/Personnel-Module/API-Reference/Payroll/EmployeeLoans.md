@@ -5,15 +5,11 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
 <details> <summary> <strong>Get All Employee Loans</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of employee loans with filtering and sorting options.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of employee loans with pagination, search, filtering by employee, loan source, date range, and status, with sorting capabilities. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/EmployeeLoans/GetAll?SearchTerm={SearchTerm}&EmployeeId={EmployeeId}&LoanSource={LoanSource}&DateFrom={DateFrom}&DateTo={DateTo}&Status={Status}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -39,10 +35,8 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -58,7 +52,6 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -89,21 +82,16 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Get Employee Loan By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve detailed employee loan information by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve complete employee loan details including all properties, installments, and attachments (full record data). <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/EmployeeLoans/GetById?Id={EmployeeLoanId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -120,10 +108,8 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -139,7 +125,6 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response model (GetEmployeeLoanByIdQueryResponse)</h3>
 <table>
   <thead>
@@ -170,7 +155,6 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>attachments</td><td>List&lt;EmployeeLoanAttachmentDto&gt;</td><td>All attachments (id, rowVersion, attachmentId, employeeLoanId).</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -220,23 +204,17 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
 }
 </pre>
 </div>
-
 <p><strong>Note:</strong> Date fields (<code>date</code>, <code>firstInstallmentDueDate</code>, <code>dueDate</code>, <code>payrollTransaction</code>) are returned as date strings (YYYY-MM-DD). <code>employeeName</code> may be empty when employee data is not loaded; use <code>employeeId</code> to resolve from the Employees API if needed.</p>
-
 </div> </details>
  
 <details> <summary> <strong>Add Employee Loan</strong>
 <br /> <span style="font-size: 90%;">Create a new employee loan.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new employee loan with automatic code generation, business rule validation, and installment generation. The employee loan is created with status "Draft". <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/EmployeeLoans/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -261,10 +239,8 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>Attachments</td><td>List&lt;string&gt;?</td><td>-</td><td>Optional list of attachment IDs</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format. Date fields use YYYY-MM-DD. Employee salary is set from the employee's active contract by the server.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "date": "2024-01-15",
@@ -279,12 +255,9 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
   "attachments": []
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -300,13 +273,11 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <p>Returns <strong>201 Created</strong> with the newly created employee loan ID (GUID string) in the response body. The <code>Location</code> header may point to the Get By Id resource.</p>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 "11111111-1111-1111-1111-111111111111"
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Code Generation</strong>: Automatically generated using sequence service.</li>
@@ -320,21 +291,16 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
   <li><strong>Installment Generation</strong>: Installments are generated automatically from <code>NumberOfInstallments</code>, <code>FirstInstallmentDueDate</code>, and <code>InstallmentAmount</code> (monthly from first due date).</li>
   <li><strong>Notes</strong>: Maximum length 1000 characters.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Edit Employee Loan</strong>
 <br /> <span style="font-size: 90%;">Update an existing employee loan.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update an existing employee loan. Only employee loans with status "Draft" can be edited. Posted employee loans cannot be modified. <br /><br />
-
 <span style="background-color:#fff3e0; color:#e65100; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/EmployeeLoans/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -362,10 +328,8 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>Attachments</td><td>List&lt;string&gt;?</td><td>-</td><td>Optional list of attachment IDs</td><td>No</td></tr>
   </tbody>
 </table>
-
 <p>Provide id, row version (from Get By Id), code, and all employee loan details. Installments are regenerated when loan details change. Employee salary is updated from the employee's active contract.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "11111111-1111-1111-1111-111111111111",
@@ -383,12 +347,9 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
   "attachments": []
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -404,10 +365,8 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful update.</p>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Status Check</strong>: Only employee loans with status "Draft" can be edited. Throws <code>CantEditOrDeletePostedRecord</code> exception if status is "Posted".</li>
@@ -418,21 +377,16 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
   <li><strong>Installments</strong>: Installments are regenerated when loan amount, count, or first due date changes.</li>
   <li><strong>Concurrency</strong>: Provide <code>RowVersion</code> from Get By Id for optimistic concurrency.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Post Employee Loan</strong>
 <br /> <span style="font-size: 90%;">Change employee loan status from Draft to Posted.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Post an employee loan, changing its status from "Draft" to "Posted". Once posted, the employee loan cannot be edited or deleted. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/EmployeeLoans/Post
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -447,21 +401,16 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>Id</td><td>guid</td><td>Not empty, must exist</td><td>Yes</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "11111111-1111-1111-1111-111111111111"
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -477,31 +426,24 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful posting.</p>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Status Check</strong>: Only employee loans with status "Draft" can be posted.</li>
   <li><strong>Status Change</strong>: Changes status from "Draft" to "Posted".</li>
   <li><strong>Immutability</strong>: Once posted, the employee loan cannot be edited or deleted.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Delete Employee Loan</strong>
 <br /> <span style="font-size: 90%;">Delete an employee loan by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Delete an employee loan using its id. Only employee loans with status "Draft" can be deleted. Posted employee loans cannot be deleted. <br /><br />
-
 <span style="background-color:#ffebee; color:#c62828; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/EmployeeLoans/Delete?Id={EmployeeLoanId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -518,10 +460,8 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -537,15 +477,12 @@ API for employee loans: list (paginated, filter by employee, loan source, date r
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response</h3>
 <p>Returns HTTP 204 No Content on successful deletion. If the employee loan does not exist or is already Posted, the API returns an error.</p>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Status Check</strong>: Only employee loans with status "Draft" can be deleted. Throws <code>CantEditOrDeletePostedRecord</code> (or similar) if status is "Posted".</li>
   <li><strong>Soft Delete</strong>: Performs a soft delete (e.g. <code>IsDeleted = true</code>, <code>IsActive = false</code>). Associated installments are also soft-deleted.</li>
 </ul>
-
 </div> </details>
 

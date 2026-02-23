@@ -3,15 +3,11 @@
 <details> <summary> <strong>Get All Employees</strong>
 <br /> <span style="font-size: 90%;">Retrieve a paginated list of employees with search and sorting.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of employees with pagination, search, and sorting. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Employees/GetAll?SearchTerm={SearchTerm}&PageNumber={PageNumber}&PageSize={PageSize}&SortBy={SortBy}&SortColumn={SortColumn}&DepartmentId={DepartmentId}&JobId={JobId}&JobLevelId={JobLevelId}&ReportToId={ReportToId}&EmploymentTypeId={EmploymentTypeId}&CountryCode={CountryCode}&Gender={Gender}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -39,10 +35,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -70,22 +64,17 @@
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Get Employee By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve detailed employee information by id.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve all the information about an employee using the employee id. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Employees/GetById?Id={Id}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -102,10 +91,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -199,22 +186,17 @@
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>View Employee By Id</strong>
 <br /> <span style="font-size: 90%;">Retrieve optimized employee information by id using SQL view.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve employee information using optimized SQL view with all related entity names (returns both Arabic and English names, selected based on current language). <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Employees/ViewById?Id={Id}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -231,10 +213,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -329,22 +309,17 @@
 }
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Get Organization Chart</strong>
 <br /> <span style="font-size: 90%;">Retrieve organization chart hierarchy for a manager.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve the organization chart showing all direct and indirect reports for a given manager. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Employees/GetOrgChart?ReportToId={ReportToId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -361,10 +336,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -390,22 +363,17 @@
 ]
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Get All Managers In Department</strong>
 <br /> <span style="font-size: 90%;">Retrieve all managers in a specific department.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve a list of all employees who are managers (have direct reports) in a specific department. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Employees/AllManagersInDepartment?DepartmentId={DepartmentId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -422,10 +390,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -441,22 +407,17 @@
 ]
 </pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Export Employees</strong>
 <br /> <span style="font-size: 90%;">Export employees data to Excel file.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Export employees data with filtering options to an Excel file. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Employees/Export?SearchTerm={SearchTerm}&DepartmentId={DepartmentId}&JobId={JobId}&JobLevelId={JobLevelId}&ReportToId={ReportToId}&EmploymentTypeId={EmploymentTypeId}&CountryCode={CountryCode}&Gender={Gender}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -480,28 +441,21 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns an Excel file (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) containing the exported employee data.</p>
-
 </div>
 </details>
 
 <details> <summary> <strong>Add Employee</strong>
 <br /> <span style="font-size: 90%;">Create a new employee record.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Create a new employee with all personal, contact, functional, and GOSI information. <br /><br />
-
 <span style="background-color:#28a745; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/Employees/Add
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -576,31 +530,24 @@
 }
 </pre>
 </div>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>201 Created</strong> with the created employee ID (GUID) in the response body.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>"c2f07af1-367e-4a3a-8cf9-90df3e0c4bae"</pre>
 </div>
-
 </div>
 </details>
 
 <details> <summary> <strong>Edit Employee</strong>
 <br /> <span style="font-size: 90%;">Update an existing employee record.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Update an existing employee with all personal, contact, functional, and GOSI information. <br /><br />
-
 <span style="background-color:#007bff; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> PUT </span>
 ./v{apiVersion}/Employees/Edit
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -682,28 +629,21 @@
 }
 </pre>
 </div>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>204 No Content</strong> on successful update.</p>
-
 </div>
 </details>
 
 <details> <summary> <strong>Delete Employee</strong>
 <br /> <span style="font-size: 90%;">Delete an employee record (soft delete).</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Soft delete an employee record by setting IsDeleted flag. <br /><br />
-
 <span style="background-color:#dc3545; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold;"> DELETE </span>
 ./v{apiVersion}/Employees/Delete?Id={Id}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -720,12 +660,9 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Response</h3>
 <p>Returns <strong>204 No Content</strong> on successful deletion.</p>
-
 </div>
 </details>

@@ -3,15 +3,11 @@
 <details> <summary> <strong>Has Sequence Settings</strong>
 <br /> <span style="font-size: 90%;">Check if sequence settings exist for a specific screen.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Check whether sequence settings are configured for a specific screen. This endpoint is used to determine if automatic code generation is available for a given screen/module. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/Sequence/HasSequenceSettings?Screen={Screen}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -28,10 +24,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -47,14 +41,12 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
 true
 </pre>
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>Purpose</strong>: This endpoint checks if sequence settings are configured for the specified screen in the General Settings module.</li>
@@ -80,5 +72,4 @@ true
   <li><strong>Module Context</strong>: The check is performed within the HR module context (<code>Modules.Hr</code>).</li>
   <li><strong>No Persistence</strong>: The sequence check does not save or increment the sequence counter (<code>SaveToContext = false</code>).</li>
 </ul>
-
 </div> </details>

@@ -3,15 +3,11 @@
 <details> <summary> <strong>Load Social Insurance Settings</strong>
 <br /> <span style="font-size: 90%;">Retrieve the current social insurance settings configuration.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve the latest social insurance settings including citizen and resident insurance configurations, percentages, and payroll indicators period. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/SocialInsurance/Load
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -27,10 +23,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -46,7 +40,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -68,21 +61,16 @@
 }
 </pre>
 </div>
-
 </div> </details>
  
 <details> <summary> <strong>Save Social Insurance Settings</strong>
 <br /> <span style="font-size: 90%;">Create or update social insurance settings configuration.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Save or update social insurance settings including citizen and resident insurance types, percentages, company and employee shares, and payroll indicators period. Use <code>Guid.Empty</code> for <code>id</code> and empty string for <code>rowVersion</code> when creating a new record. For updates, provide the actual <code>id</code> and <code>rowVersion</code> from the Load endpoint. <br /><br />
-
 <span style="background-color:#e8f5e9; color:#1b5e20; padding:3px 8px; border-radius:4px; font-weight:bold;"> POST </span>
 ./v{apiVersion}/SocialInsurance/Save
-
 <br /><br />
 <hr />
-
 <h3>Request Body</h3>
 <table>
   <thead>
@@ -111,10 +99,8 @@
     <tr><td>IsAdvanceRequestAutoConversionEnabled</td><td>bool</td><td>-</td><td>Yes</td><td>Flag indicating if advance request auto conversion is enabled.</td></tr>
   </tbody>
 </table>
-
 <p>The request body must be sent in JSON format. For new records, use <code>Guid.Empty</code> (00000000-0000-0000-0000-000000000000) for <code>id</code> and empty string for <code>rowVersion</code>.</p>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;"> 
-
 <pre>
 {
   "id": "00000000-0000-0000-0000-000000000000",
@@ -133,12 +119,9 @@
   "isAdvanceRequestAutoConversionEnabled": true
 }
 </pre>
-
 </div>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -154,7 +137,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#98c379; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -176,7 +158,6 @@
 }
 </pre>
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>New Record</strong>: Use <code>Guid.Empty</code> (00000000-0000-0000-0000-000000000000) for <code>id</code> and empty string for <code>rowVersion</code> when creating a new record.</li>
@@ -186,21 +167,16 @@
   <li><strong>Date Validation</strong>: <code>ToDate</code> must be greater than or equal to <code>FromDate</code>.</li>
   <li><strong>Required Fields</strong>: <code>FromDate</code>, <code>ToDate</code>, <code>PayrollDate</code>, and <code>IsAdvanceRequestAutoConversionEnabled</code> are always required.</li>
 </ul>
-
 </div> </details>
  
 <details> <summary> <strong>Get GOSI Information</strong>
 <br /> <span style="font-size: 90%;">Retrieve GOSI (General Organization for Social Insurance) information for an employee.</span> </summary> 
 <br /> 
-
 <div style="border: 1px solid #ddd; padding: 8px; border-radius: 4px;"> Retrieve the company and employee parts of social insurance (GOSI) for a specific employee based on the application country code and employee ID. <br /><br />
-
 <span style="background-color:#f3f3f3; color:#4a24b4; padding:3px 8px; border-radius:4px; font-weight:bold;"> GET </span>
 ./v{apiVersion}/SocialInsurance/GetGosiInformation?EmployeeId={EmployeeId}
-
 <br /><br />
 <hr />
-
 <h3>Request Parameters</h3>
 <table>
   <thead>
@@ -217,10 +193,8 @@
     <tr><td>apiVersion</td><td>path</td><td>string</td><td>Yes</td><td>API version included in the URL.</td></tr>
   </tbody>
 </table>
-
 <br />
 <hr />
-
 <h3>Responses</h3>
 <table>
   <thead>
@@ -236,7 +210,6 @@
     <tr><td>500 Internal Server Error</td><td>Unexpected server error</td><td>DefaultExceptionModel</td></tr>
   </tbody>
 </table>
-
 <h3>Response Example</h3>
 <div style="background-color:#1e1e1e; color:#d19a66; padding:12px; border-radius:6px; font-family:Consolas, monospace; font-size:14px; overflow-x:auto;">
 <pre>
@@ -246,7 +219,6 @@
 }
 </pre>
 </div>
-
 <h3>Business Rules</h3>
 <ul>
   <li><strong>GOSI Calculation</strong>: The GOSI information is calculated based on the application country code and employee's insurance type (citizen or resident).</li>
@@ -254,6 +226,5 @@
   <li><strong>General Information</strong>: If no employee ID is provided, general GOSI information is returned based on default settings from the social insurance configuration.</li>
   <li><strong>Stored Procedure</strong>: The calculation uses the stored procedure <code>Hr.GetSocialInsuranceParts</code> which considers the employee's nationality and current insurance settings.</li>
 </ul>
-
 </div> </details>
 
