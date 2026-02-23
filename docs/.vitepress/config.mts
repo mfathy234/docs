@@ -91,13 +91,6 @@ export default withMermaid(
         .VPNavBar.has-sidebar.top { background-color: #04172D !important; }
         .VPNavBar .divider-line { background-color: rgba(26,144,176,0.18) !important; }
         .VPNavBar::before { background-color: transparent !important; }
-
-        /* Sidebar background — all child layers */
-        .VPSidebar { background-color: #04172D !important; }
-        .VPSidebar .curtain { background-color: #04172D !important; }
-        @media (min-width: 960px) {
-          .VPSidebar .nav { background-color: #04172D !important; }
-        }
       `],
     ],
 

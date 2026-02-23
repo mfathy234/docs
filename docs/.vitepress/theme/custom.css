@@ -1,234 +1,348 @@
 /* ═══════════════════════════════════════════════════════════════
    Microtec Documentation — Custom Theme
-   Brand: Dark Navy (#04172D) + Teal (#1A90B0)
+   Palette: Ocean Navy (#0D2545 → #0F2D58) + Teal (#22A5C8)
    ═══════════════════════════════════════════════════════════════ */
 
-/* ─── Light Mode Brand Tokens ────────────────────────────────── */
+/* ─── Light Mode Tokens ──────────────────────────────────────── */
 :root {
-  /* Primary brand palette */
-  --vp-c-brand-1: #1A90B0;
-  --vp-c-brand-2: #3195B9;
-  --vp-c-brand-3: #6EC1E4;
-  --vp-c-brand-soft: rgba(26, 144, 176, 0.12);
+  /* Teal brand */
+  --vp-c-brand-1:    #22A5C8;
+  --vp-c-brand-2:    #3DB5D4;
+  --vp-c-brand-3:    #6EC1E4;
+  --vp-c-brand-soft: rgba(34, 165, 200, 0.12);
 
   /* Text */
-  --vp-c-text-1: #152133;
-  --vp-c-text-2: #30486D;
-  --vp-c-text-3: #4a6580;
+  --vp-c-text-1: #18304a;
+  --vp-c-text-2: #2f5270;
+  --vp-c-text-3: #4a7090;
 
   /* Page backgrounds */
-  --vp-c-bg: #FFFFFF;
-  --vp-c-bg-soft: #F8FBFD;
-  --vp-c-bg-mute: #E8F3F7;
-  --vp-c-bg-alt: #F0F7FA;
+  --vp-c-bg:     #ffffff;
+  --vp-c-bg-soft:#F5F9FC;
+  --vp-c-bg-mute:#EAF3F8;
+  --vp-c-bg-alt: #EEF6FA;
   --vp-c-bg-elv: #ffffff;
 
   /* Borders */
-  --vp-c-border: #d4e8f0;
-  --vp-c-divider: #e2eff5;
-  --vp-c-gutter: #e8f3f7;
+  --vp-c-border:  #c8e0ed;
+  --vp-c-divider: #d9ecf5;
+  --vp-c-gutter:  #e4f0f7;
 
   /* Headings */
-  --vp-c-heading: #14728F;
-
-  /* Code blocks */
-  --vp-code-bg: #E8F3F7;
-  --vp-code-color: #0d5c75;
-  --vp-code-block-bg: #0d1f33;
-  --vp-code-block-divider-color: #1e3a52;
-  --vp-code-lang-color: #6EC1E4;
-  --vp-code-copy-code-hover-bg: rgba(26, 144, 176, 0.15);
-
-  /* Typography */
-  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif;
-  --vp-font-family-mono: "SF Mono", "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
-}
-
-/* ─── High-specificity variable pins (beats any single :root rule) ── */
-/* :root:root has specificity (0,2,0) vs VitePress's :root (0,1,0).
-   This guarantees our nav + sidebar colours win in BOTH dev and build,
-   regardless of which stylesheet loads last.                          */
-:root:root {
-  --vp-nav-bg-color:     #04172D;
-  --vp-sidebar-bg-color: #04172D;
-}
-
-/* ─── Dark Mode Overrides ────────────────────────────────────── */
-/* VitePress adds class "dark" on <html>. We use .dark with higher
-   specificity to guarantee our tokens win over VitePress defaults. */
-.dark {
-  /* Content backgrounds */
-  --vp-c-bg: #0c1b2e;
-  --vp-c-bg-soft: #0f2236;
-  --vp-c-bg-mute: #122744;
-  --vp-c-bg-alt: #091525;
-  --vp-c-bg-elv: #0f2236;
-
-  /* Text */
-  --vp-c-text-1: #dce8f0;
-  --vp-c-text-2: #92b8cc;
-  --vp-c-text-3: #6595aa;
-
-  /* Borders */
-  --vp-c-border: #1e3a52;
-  --vp-c-divider: #173045;
-  --vp-c-gutter: #091525;
-
-  /* Headings */
-  --vp-c-heading: #4ab8d8;
-
-  /* Brand — slightly brighter in dark */
-  --vp-c-brand-1: #3db5d4;
-  --vp-c-brand-2: #5ac6e0;
-  --vp-c-brand-3: #80d4ec;
-  --vp-c-brand-soft: rgba(61, 181, 212, 0.14);
-
-  /* Nav + sidebar stay dark navy in dark mode too — the :root:root
-     block above already pins them but repeat here for belt-and-suspenders */
-  --vp-nav-bg-color: #04172D;
-  --vp-sidebar-bg-color: #04172D;
+  --vp-c-heading: #0e6d8d;
 
   /* Code */
-  --vp-code-bg: rgba(26, 144, 176, 0.14);
-  --vp-code-color: #6EC1E4;
-  --vp-code-block-bg: #061421;
-  --vp-code-block-divider-color: #0f2236;
+  --vp-code-bg:                 #EAF3F8;
+  --vp-code-color:              #0a5570;
+  --vp-code-block-bg:           #07162a;
+  --vp-code-block-divider-color:#122438;
+  --vp-code-lang-color:         #4FC3E0;
+  --vp-code-copy-code-hover-bg: rgba(34, 165, 200, 0.14);
+
+  /* Typography */
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", "Segoe UI", sans-serif;
+  --vp-font-family-mono: "SF Mono", "JetBrains Mono", "Fira Code",
+    "Cascadia Code", Consolas, monospace;
+
+  /* Sidebar CSS vars — used by sidebar item rules */
+  --vp-c-sidebar-item-text:   #2f5270;
+  --vp-c-sidebar-group-text:  #0d7a96;
+  --vp-c-sidebar-hover-text:  #0e8fad;
+  --vp-c-sidebar-active-text: #0d7a96;
+  --vp-c-sidebar-caret:       #7aa8be;
+
+  /* Hero CSS vars — VPHero reads these directly */
+  --vp-home-hero-name-color:            transparent;
+  --vp-home-hero-name-background:       linear-gradient(120deg, #6EC1E4 20%, #1A90B0 80%);
+  --vp-home-hero-image-background-image:linear-gradient(135deg,
+      rgba(34,165,200,.25) 0%, rgba(13,37,69,.35) 100%);
+  --vp-home-hero-image-filter:          blur(44px);
 }
 
-/* ─── Navigation Bar ─────────────────────────────────────────── */
-/* Target both .VPNav wrapper and the inner .VPNavBar that VitePress
-   uses for background. Covers mobile + desktop in all modes.     */
+/* Pin nav var at higher specificity than VitePress's :root.
+   Sidebar bg uses a light value in light mode; dark mode overrides below. */
+:root:root {
+  --vp-nav-bg-color:     #0D2545;
+  --vp-sidebar-bg-color: #f0f6fa;
+}
+
+/* ─── Dark Mode ───────────────────────────────────────────────── */
+.dark {
+  --vp-c-bg:     #091a2e;
+  --vp-c-bg-soft:#0c2138;
+  --vp-c-bg-mute:#102844;
+  --vp-c-bg-alt: #071422;
+  --vp-c-bg-elv: #0c2138;
+
+  --vp-c-text-1: #d4eaf5;
+  --vp-c-text-2: #88b6cc;
+  --vp-c-text-3: #5d95ac;
+
+  --vp-c-border:  #1a3d58;
+  --vp-c-divider: #14304a;
+  --vp-c-gutter:  #071422;
+
+  --vp-c-heading: #42bcd8;
+
+  --vp-c-brand-1: #38b8d8;
+  --vp-c-brand-2: #52c6e4;
+  --vp-c-brand-3: #80d4ec;
+  --vp-c-brand-soft: rgba(56, 184, 216, 0.14);
+
+  --vp-nav-bg-color:     #0D2545;
+  --vp-sidebar-bg-color: #0D2545;
+  --vp-c-sidebar-item-text: #9ec6d8;
+  --vp-c-sidebar-group-text: #38B2CC;
+  --vp-c-sidebar-hover-text: #c8e4f0;
+  --vp-c-sidebar-active-text: #4FC3E0;
+  --vp-c-sidebar-caret: #4a7a96;
+
+  --vp-code-bg:    rgba(34, 165, 200, 0.12);
+  --vp-code-color: #6EC1E4;
+  --vp-code-block-bg: #04101f;
+}
+
+/* ─── Navbar ─────────────────────────────────────────────────── */
+/*
+  VitePress sets .VPNavBar itself to transparent at ≥960 px.
+  The actual coloured areas are:
+    - .VPNavBar.has-sidebar .title  (left block, 0–960 sidebar width)
+    - .VPNavBar .content-body       (right / full-width block)
+  We must target ALL of them + the root for mobile / non-sidebar pages.
+*/
 .VPNav,
 .VPNavBar,
+.VPNavBar.top,
+.VPNavBar.home,
 .VPNavBar.has-sidebar,
-.VPNavBar.home {
-  background-color: #04172D !important;
-  border-bottom: 1px solid rgba(26, 144, 176, 0.18) !important;
+.VPNavBar.screen-open,
+.VPNavBar .content-body,
+.VPNavBar.has-sidebar .title {
+  background: linear-gradient(180deg, #0F2D58 0%, #0D2545 100%) !important;
+  border-bottom: 1px solid rgba(34, 165, 200, 0.15) !important;
 }
 
-/* Remove VitePress blur / semi-transparent backdrop on nav */
-.VPNavBar::before,
-.VPNavBar .divider {
-  background-color: transparent !important;
-}
+.VPNavBar::before        { background: transparent !important; }
+.VPNavBar .divider-line  { background: rgba(34, 165, 200, 0.15) !important; }
 
-/* Nav title */
+/* Nav title text */
 .VPNavBarTitle .title {
-  color: #ffffff !important;
+  color: #fff !important;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
-/* Nav menu links */
+/* Nav logo sizing */
+.VPNavBarTitle .logo { height: 26px !important; }
+
+/* Nav links */
 .VPNavBarMenu .VPNavBarMenuLink {
-  color: #C8DDE8 !important;
+  color: #b8d8ea !important;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.18s ease;
 }
-
 .VPNavBarMenu .VPNavBarMenuLink:hover,
-.VPNavBarMenu .VPNavBarMenuLink.active {
-  color: #6EC1E4 !important;
+.VPNavBarMenu .VPNavBarMenuLink.active { color: #4FC3E0 !important; }
+
+/* Dropdown trigger text */
+.VPFlyout .text,
+.VPNavBarMenuGroup .text { color: #b8d8ea !important; transition: color 0.18s; }
+.VPFlyout:hover .text,
+.VPFlyout.active .text   { color: #4FC3E0 !important; }
+
+/* Dropdown panel */
+.VPFlyoutMenu {
+  background: #0D2545 !important;
+  border: 1px solid rgba(34, 165, 200, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(4, 15, 32, 0.5) !important;
+  border-radius: 10px !important;
+}
+.VPFlyoutMenu .item .link,
+.VPFlyoutMenu .item span { color: #b8d8ea !important; }
+.VPFlyoutMenu .item a:hover,
+.VPFlyoutMenu .item a:hover span {
+  color: #4FC3E0 !important;
+  background: rgba(34, 165, 200, 0.1) !important;
 }
 
-/* Hamburger in dark navy bar */
+/* Search input */
+.VPNavBarSearch .DocSearch-Button {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(34, 165, 200, 0.2) !important;
+  color: #b8d8ea !important;
+}
+
+/* Hamburger */
 .VPNavBarHamburger .top,
 .VPNavBarHamburger .middle,
-.VPNavBarHamburger .bottom {
-  background-color: #C8DDE8 !important;
-}
+.VPNavBarHamburger .bottom { background: #b8d8ea !important; }
 
 /* ─── Sidebar ────────────────────────────────────────────────── */
-/* Do NOT override padding-top — VitePress sets it to var(--vp-nav-height)
-   at 960px which is what keeps items below the navbar.               */
+/* Light mode: clean white/light sidebar */
 .VPSidebar {
-  background-color: #04172D !important;
-  border-right: 1px solid rgba(26, 144, 176, 0.15) !important;
+  background: linear-gradient(170deg, #f6fbfe 0%, #eef6fb 100%) !important;
+  border-right: 1px solid rgba(34, 165, 200, 0.18) !important;
 }
-
-/* The curtain and nav inside the sidebar also declare their own
-   background-color via var(--vp-sidebar-bg-color). Pin them directly
-   so they match even if the CSS variable doesn't win in dev mode.    */
 .VPSidebar .curtain {
-  background-color: #04172D !important;
+  background: linear-gradient(180deg, #f6fbfe 0%, #eef6fb 100%) !important;
+}
+.VPSidebar .nav { background: transparent !important; }
+
+/* Dark mode: dark navy gradient */
+.dark .VPSidebar {
+  background: linear-gradient(170deg, #0F2D58 0%, #0D2545 100%) !important;
+  border-right: 1px solid rgba(34, 165, 200, 0.12) !important;
+}
+.dark .VPSidebar .curtain {
+  background: linear-gradient(180deg, #0F2D58 0%, #0D2545 100%) !important;
 }
 
-@media (min-width: 960px) {
-  .VPSidebar .nav {
-    background-color: #04172D !important;
-  }
+/* Group labels */
+.VPSidebarItem.level-0 > .item > .text {
+  color: var(--vp-c-sidebar-group-text, #0e8fad) !important;
+  font-size: 0.70rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.10em !important;
+  text-transform: uppercase !important;
 }
 
-/* Sidebar item text */
+/* Light mode group labels — darker teal for contrast on white */
+:not(.dark) .VPSidebarItem.level-0 > .item > .text {
+  color: #0d7a96 !important;
+}
+
+/* Item text */
 .VPSidebarItem .text {
-  color: #9bbdd0;
+  color: var(--vp-c-sidebar-item-text, #2f5270);
   font-size: 0.875rem;
   font-weight: 400;
   transition: color 0.18s ease;
 }
 
-/* Active item text */
-.VPSidebarItem.is-active > .item .text,
-.VPSidebarItem.is-active > .item > a > .text {
-  color: #6EC1E4 !important;
-  font-weight: 600;
-}
-
-/* Hover */
-.VPSidebarItem:not(.is-active) .item:hover .text {
-  color: #dce8f0;
-}
-
-/* Active item — teal left border */
+/* Active item — soft teal background + left border */
 .VPSidebarItem.is-active > .item {
+  background: rgba(34, 165, 200, 0.10);
+  border-radius: 7px;
   position: relative;
 }
-
 .VPSidebarItem.is-active > .item::before {
   content: '';
   position: absolute;
-  left: -8px;
-  top: 2px;
-  bottom: 2px;
+  left: -4px;
+  top: 4px;
+  bottom: 4px;
   width: 3px;
-  background: #1A90B0;
+  background: #22A5C8;
   border-radius: 2px;
 }
-
-/* Group labels (folder names) */
-.VPSidebarItem.level-0 > .item > .text {
-  color: #4ab8d8 !important;
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.09em !important;
-  text-transform: uppercase !important;
+.VPSidebarItem.is-active > .item .text,
+.VPSidebarItem.is-active > .item > a > .text {
+  color: var(--vp-c-sidebar-active-text, #0e8fad) !important;
+  font-weight: 600;
 }
 
-/* Caret icon */
+/* Light mode active text — rich teal on white */
+:not(.dark) .VPSidebarItem.is-active > .item .text,
+:not(.dark) .VPSidebarItem.is-active > .item > a > .text {
+  color: #0d7a96 !important;
+}
+
+/* Hover row */
+.VPSidebarItem:not(.is-active) .item:hover {
+  background: rgba(34, 165, 200, 0.08);
+  border-radius: 6px;
+}
+.VPSidebarItem:not(.is-active) .item:hover .text {
+  color: var(--vp-c-sidebar-hover-text, #0e8fad);
+}
+
+/* Caret */
 .VPSidebarItem .caret {
-  color: #4a7a96 !important;
-  transition: transform 0.2s ease, color 0.2s ease;
+  color: var(--vp-c-sidebar-caret, #7aa8be) !important;
+  transition: color 0.18s, transform 0.2s;
+}
+.VPSidebarItem:hover .caret { color: #22A5C8 !important; }
+
+/* Scrollbar */
+.VPSidebar::-webkit-scrollbar        { width: 3px; }
+.VPSidebar::-webkit-scrollbar-track  { background: transparent; }
+.VPSidebar::-webkit-scrollbar-thumb  { background: rgba(34,165,200,.2); border-radius: 3px; }
+.VPSidebar::-webkit-scrollbar-thumb:hover { background: rgba(34,165,200,.4); }
+
+/* ─── Hero ───────────────────────────────────────────────────── */
+/* Target both class names VitePress uses for the hero block */
+.VPHero,
+.VPHomeHero,
+.VPHero.VPHomeHero {
+  background: linear-gradient(135deg, #07162a 0%, #0D2545 50%, #112E5A 100%) !important;
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
 }
 
-.VPSidebarItem:hover .caret {
-  color: #6EC1E4 !important;
+/* Gradient name text — uses CSS vars set in :root above */
+.VPHero .name {
+  background:            var(--vp-home-hero-name-background);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip:         text;
+}
+.VPHero .text    { color: #d4eaf5 !important; }
+.VPHero .tagline { color: #7abdd2 !important; }
+
+/* ─── CTA Buttons ────────────────────────────────────────────── */
+.VPButton.medium.brand {
+  background: #22A5C8;
+  border-color: #22A5C8;
+  color: #fff;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.VPButton.medium.brand:hover {
+  background: #3DB5D4;
+  border-color: #3DB5D4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(34, 165, 200, 0.35);
+}
+.VPButton.medium.alt {
+  border-color: rgba(110, 193, 228, 0.4);
+  color: #6EC1E4;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+}
+.VPButton.medium.alt:hover {
+  border-color: #6EC1E4;
+  color: #fff;
+  transform: translateY(-1px);
 }
 
-/* ─── Local nav (breadcrumb bar on mobile) ───────────────────── */
-.VPLocalNav {
-  background-color: var(--vp-c-bg) !important;
-  border-bottom: 1px solid var(--vp-c-divider) !important;
+/* ─── Feature Cards ──────────────────────────────────────────── */
+/* Push the cards section away from the hero */
+.VPHomeFeatures,
+.VPFeatures {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.VPFeatures .VPFeature {
+  border-radius: 14px !important;
+  border: 1px solid var(--vp-c-border) !important;
+  background: var(--vp-c-bg-soft) !important;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s !important;
+  cursor: pointer;
+}
+.VPFeatures .VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 6px 24px rgba(34, 165, 200, 0.14) !important;
+  transform: translateY(-3px) !important;
+}
+.VPFeatures .VPFeature .title {
+  color: var(--vp-c-heading) !important;
+  font-weight: 650 !important;
 }
 
 /* ─── Content Area ───────────────────────────────────────────── */
-.VPContent {
-  background-color: var(--vp-c-bg);
-}
-
-.VPDoc .content-container {
-  max-width: 900px !important;
-}
+.VPContent { background-color: var(--vp-c-bg); }
+.VPDoc .content-container { max-width: 900px !important; }
 
 /* ─── Typography ─────────────────────────────────────────────── */
 .vp-doc {
@@ -236,7 +350,6 @@
   line-height: 1.75;
   color: var(--vp-c-text-1);
 }
-
 .vp-doc h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -247,7 +360,6 @@
   padding-bottom: 0.4em;
   color: var(--vp-c-text-1);
 }
-
 .vp-doc h2 {
   color: var(--vp-c-heading);
   font-size: 1.4rem;
@@ -257,67 +369,42 @@
   padding-bottom: 0.3em;
   margin-top: 2.5em;
 }
-
-.vp-doc h3 {
-  color: var(--vp-c-heading);
-  font-size: 1.15rem;
-  font-weight: 600;
-}
-
-.vp-doc h4,
-.vp-doc h5,
-.vp-doc h6 {
-  color: var(--vp-c-text-2);
-  font-weight: 600;
-}
-
+.vp-doc h3 { color: var(--vp-c-heading); font-size: 1.15rem; font-weight: 600; }
+.vp-doc h4, .vp-doc h5, .vp-doc h6 { color: var(--vp-c-text-2); font-weight: 600; }
 .vp-doc a {
   color: var(--vp-c-brand-1);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.18s ease;
 }
+.vp-doc a:hover { color: var(--vp-c-brand-2); text-decoration: underline; }
+.vp-doc p { margin: 1em 0; line-height: 1.8; }
 
-.vp-doc a:hover {
-  color: var(--vp-c-brand-2);
-  text-decoration: underline;
-}
-
-.vp-doc p {
-  margin: 1em 0;
-  line-height: 1.8;
-}
-
-/* ─── Code — Inline ──────────────────────────────────────────── */
+/* ─── Inline Code ────────────────────────────────────────────── */
 .vp-doc :not(pre) > code {
-  background-color: var(--vp-code-bg);
+  background: var(--vp-code-bg);
   color: var(--vp-code-color);
   border-radius: 5px;
   padding: 0.15em 0.45em;
   font-size: 0.875em;
   font-family: var(--vp-font-family-mono);
   font-weight: 500;
-  border: 1px solid rgba(26, 144, 176, 0.2);
+  border: 1px solid rgba(34, 165, 200, 0.18);
 }
 
-/* ─── Code — Block ───────────────────────────────────────────── */
+/* ─── Code Blocks ────────────────────────────────────────────── */
 .vp-doc div[class*='language-'] {
   border-radius: 10px !important;
-  box-shadow: 0 2px 12px rgba(4, 23, 45, 0.14), 0 1px 3px rgba(4, 23, 45, 0.08);
+  box-shadow: 0 2px 12px rgba(4,15,32,.10), 0 1px 3px rgba(4,15,32,.06);
   overflow: hidden;
   margin: 1.5em 0;
-  border: 1px solid rgba(26, 144, 176, 0.12);
+  border: 1px solid rgba(34, 165, 200, 0.10);
   transition: box-shadow 0.2s ease;
 }
-
 .vp-doc div[class*='language-']:hover {
-  box-shadow: 0 4px 20px rgba(4, 23, 45, 0.2), 0 2px 6px rgba(4, 23, 45, 0.1);
+  box-shadow: 0 4px 20px rgba(4,15,32,.16), 0 2px 6px rgba(4,15,32,.08);
 }
-
-.vp-doc div[class*='language-'] pre {
-  border-radius: 0 !important;
-}
-
+.vp-doc div[class*='language-'] pre { border-radius: 0 !important; }
 .vp-doc div[class*='language-'] > span.lang {
   color: var(--vp-code-lang-color);
   font-size: 0.75rem;
@@ -333,198 +420,72 @@
   margin: 1.5em 0;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(4, 23, 45, 0.08);
+  box-shadow: 0 1px 4px rgba(4,15,32,.06);
 }
-
-.vp-doc table thead tr {
-  background-color: #04172D;
-  color: #C8DDE8;
-}
-
-.dark .vp-doc table thead tr {
-  background-color: #061826;
-}
-
+.vp-doc table thead tr                { background: #0D2545; }
+.dark .vp-doc table thead tr          { background: #071422; }
 .vp-doc table thead th {
   padding: 0.75em 1em;
   font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 0.03em;
   text-align: left;
-  color: #6EC1E4;
+  color: #4FC3E0;
   border: none;
 }
-
-.vp-doc table tbody tr {
-  border-bottom: 1px solid var(--vp-c-divider);
-  transition: background-color 0.15s ease;
-}
-
-.vp-doc table tbody tr:hover {
-  background-color: var(--vp-c-bg-soft);
-}
-
-.vp-doc table td {
-  padding: 0.65em 1em;
-  font-size: 0.9rem;
-  border: none;
-}
+.vp-doc table tbody tr { border-bottom: 1px solid var(--vp-c-divider); transition: background 0.15s; }
+.vp-doc table tbody tr:hover { background: var(--vp-c-bg-soft); }
+.vp-doc table td { padding: 0.65em 1em; font-size: 0.9rem; border: none; }
 
 /* ─── Blockquotes ────────────────────────────────────────────── */
 .vp-doc blockquote {
   border-left: 4px solid var(--vp-c-brand-1);
-  background-color: var(--vp-c-bg-soft);
+  background: var(--vp-c-bg-soft);
   margin: 1.5em 0;
   padding: 0.75em 1.25em;
   border-radius: 0 8px 8px 0;
   color: var(--vp-c-text-2);
 }
-
-.vp-doc blockquote p {
-  margin: 0;
-}
+.vp-doc blockquote p { margin: 0; }
 
 /* ─── Custom Containers ──────────────────────────────────────── */
-.vp-doc .custom-block {
-  border-radius: 8px;
-  margin: 1.5em 0;
-}
-
+.vp-doc .custom-block { border-radius: 8px; margin: 1.5em 0; }
 .vp-doc .custom-block.tip {
   border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-brand-soft);
+  background: var(--vp-c-brand-soft);
 }
 
-/* ─── Mermaid Diagrams ───────────────────────────────────────── */
-.mermaid-diagram,
-.vp-doc .mermaid {
+/* ─── Mermaid ────────────────────────────────────────────────── */
+.mermaid-diagram, .vp-doc .mermaid {
   display: flex;
   justify-content: center;
   padding: 1.5em;
-  background-color: var(--vp-c-bg-soft);
+  background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-border);
   border-radius: 10px;
   margin: 1.5em 0;
   overflow-x: auto;
 }
-
-.mermaid-diagram svg,
-.vp-doc .mermaid svg {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ─── Homepage Hero ──────────────────────────────────────────── */
-.VPHome .VPHero {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background: linear-gradient(135deg, #04172D 0%, #0a2545 60%, #0d3460 100%);
-}
-
-.VPHome .VPHero .name {
-  background: linear-gradient(120deg, #6EC1E4, #1A90B0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.VPHome .VPHero .text {
-  color: #e0eef5;
-}
-
-.VPHome .VPHero .tagline {
-  color: #9bbdd0;
-}
-
-/* Hero action buttons */
-.VPButton.medium.brand {
-  background-color: #1A90B0;
-  border-color: #1A90B0;
-  color: #ffffff;
-  transition: background-color 0.2s, transform 0.15s;
-}
-
-.VPButton.medium.brand:hover {
-  background-color: #3195B9;
-  border-color: #3195B9;
-  transform: translateY(-1px);
-}
-
-.VPButton.medium.alt {
-  border-color: rgba(110, 193, 228, 0.45);
-  color: #6EC1E4;
-  transition: border-color 0.2s, color 0.2s, transform 0.15s;
-}
-
-.VPButton.medium.alt:hover {
-  border-color: #6EC1E4;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-/* Feature cards — clickable with hover lift */
-.VPFeatures .VPFeature {
-  border-radius: 12px !important;
-  border: 1px solid var(--vp-c-border) !important;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s !important;
-  cursor: pointer;
-}
-
-.VPFeatures .VPFeature:hover {
-  border-color: var(--vp-c-brand-1) !important;
-  box-shadow: 0 4px 20px rgba(26, 144, 176, 0.15) !important;
-  transform: translateY(-2px) !important;
-}
-
-.VPFeatures .VPFeature .title {
-  color: var(--vp-c-heading) !important;
-  font-weight: 650 !important;
-}
+.mermaid-diagram svg, .vp-doc .mermaid svg { max-width: 100%; height: auto; }
 
 /* ─── Outline / TOC ──────────────────────────────────────────── */
-.VPDocOutlineItem a {
-  color: var(--vp-c-text-3);
-  font-size: 0.84rem;
-  transition: color 0.18s ease;
-}
-
+.VPDocOutlineItem a { color: var(--vp-c-text-3); font-size: 0.84rem; transition: color 0.18s; }
 .VPDocOutlineItem a:hover,
-.VPDocOutlineItem.active a {
-  color: var(--vp-c-brand-1);
-}
+.VPDocOutlineItem.active a { color: var(--vp-c-brand-1); }
 
-/* ─── Sidebar Scrollbar ──────────────────────────────────────── */
-.VPSidebar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.VPSidebar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.VPSidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(26, 144, 176, 0.25);
-  border-radius: 4px;
-}
-
-.VPSidebar::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(26, 144, 176, 0.5);
+/* ─── Local Nav ──────────────────────────────────────────────── */
+.VPLocalNav {
+  background: var(--vp-c-bg) !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
 }
 
 /* ─── Smooth Transitions ─────────────────────────────────────── */
-.VPContent,
-.VPSidebar,
-.VPNav {
-  transition: background-color 0.25s ease, border-color 0.25s ease;
+.VPContent, .VPSidebar, .VPNav {
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .vp-doc h1 {
-    font-size: 1.6rem;
-  }
-
-  .vp-doc h2 {
-    font-size: 1.25rem;
-  }
+  .vp-doc h1 { font-size: 1.6rem; }
+  .vp-doc h2 { font-size: 1.25rem; }
 }
