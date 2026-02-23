@@ -110,9 +110,46 @@ export default withMermaid(
 
       nav: [
         { text: 'Home', link: '/' },
-        { text: 'Authorization', link: '/Authorization-Token-Design' },
-        { text: 'Architecture', link: '/saga-architecture-complete-guide' },
-        { text: 'Data Transfer', link: '/DataTransfer/ARCHITECTURE' },
+        {
+          text: 'Polaris Systems',
+          items: [
+            { text: 'Overview', link: '/Polaris-Systems' },
+            { text: 'HR Modules', link: '/Polaris-Systems/HR-Modules' },
+            { text: 'Personnel API Reference', link: '/Polaris-Systems/HR-Modules/Personnel-Module/API-Reference' },
+            { text: 'Agile Ceremonies', link: '/Polaris-Systems/Agile-Cermonies' },
+            { text: 'Protocol of Engagement', link: '/Polaris-Systems/Protocol-of-Engagment' },
+            { text: 'Protocol of Quality', link: '/Polaris-Systems/Protocol-Of-Quality' },
+          ]
+        },
+        {
+          text: 'Microtec',
+          items: [
+            { text: 'Company Overview', link: '/Microtec/001-Company-Overview' },
+            { text: 'Common Processes', link: '/Microtec/002-Common-Processes' },
+            { text: 'Teams & Departments', link: '/Microtec/003-Teams-and-Departments' },
+            { text: 'Tools & Frameworks', link: '/Microtec/004-Tools-and-Frameworks' },
+          ]
+        },
+        {
+          text: 'Architecture',
+          items: [
+            { text: 'Saga Architecture', link: '/saga-architecture-complete-guide' },
+            { text: 'Data Transfer', link: '/DataTransfer/ARCHITECTURE' },
+            { text: 'Authorization Tokens', link: '/Authorization-Token-Design' },
+            { text: 'Idempotency Fixes', link: '/saga-idempotency-fixes-required' },
+          ]
+        },
+        {
+          text: 'Solution Docs',
+          items: [
+            { text: 'Solution Architecture', link: '/Solution-Documentation/Solution-Architecture' },
+            { text: 'Solution Design', link: '/Solution-Documentation/Solution-Design' },
+            { text: 'Sales Invoice', link: '/Solution-Documentation/Sales-Invoice-Documentation' },
+            { text: 'Purchase Invoice', link: '/Solution-Documentation/Purchase-Invoice-Documentation' },
+            { text: 'ZATCA Sending Flow', link: '/Solution-Documentation/Zatca-Sending-flow' },
+            { text: 'Idempotency Spec', link: '/Solution-Documentation/Idempotency-Implementation-Specification' },
+          ]
+        },
         {
           text: 'POS',
           items: [
@@ -132,6 +169,34 @@ export default withMermaid(
             { text: 'Technical Overview', link: '/Erp/technical' },
             { text: 'Business Logic', link: '/Erp/business' },
             { text: 'Code Specifications', link: '/Erp/code_specs' },
+          ]
+        },
+        {
+          text: 'Processes',
+          items: [
+            { text: 'Business Process Cycle', link: '/Business-Process-Cycle' },
+            { text: 'Kanban Workflow', link: '/Kanban-Workflow' },
+            { text: 'Definition of Done', link: '/Definition-of-Done-Feature-Based-Delivery-Process' },
+            { text: 'What is Scrum?', link: '/What-is-Scrum' },
+            { text: 'The 4 Core Values of Agile', link: '/The-4-Core-Values-of-Agile' },
+          ]
+        },
+        {
+          text: 'Recruitment',
+          items: [
+            { text: 'Sr. Frontend Interview', link: '/Recuritment/Senior-Frontend-Angular-Engineer-interview' },
+            { text: 'Sr. Frontend Scoring', link: '/Recuritment/Senior-Frontend-Angular-Engineer-scoring-system' },
+            { text: 'Quality Engineers', link: '/Recuritment/Quality-Engineers' },
+          ]
+        },
+        {
+          text: 'Resources',
+          items: [
+            { text: 'FAQ', link: '/Frequently-Asked-Questions-FAQ' },
+            { text: 'Training & Tutorials', link: '/Training-and-Tutorials' },
+            { text: 'Server Deployment', link: '/Server-Deployment' },
+            { text: 'Shared Packages', link: '/Shared-Packages' },
+            { text: 'Sequence Diagrams', link: '/Sequence-Diagrams' },
           ]
         },
       ],
