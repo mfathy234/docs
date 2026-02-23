@@ -60,23 +60,6 @@ function generateSidebar() {
   return [...rootItems, ...groups]
 }
 
-// ─── Vite Plugin: fix Azure DevOps wiki HTML ──────────────────────────────────
-// markdown-it splits type-6 HTML blocks (like <details>) at blank lines, which
-// leaves <div> tags unclosed from Vue's template compiler perspective.
-// This plugin collapses blank lines inside every <details>...</details> block
-// before markdown-it processes the file, so the whole block is one HTML chunk.
-const fixDetailsPlugin = {
-  name: 'collapse-details-blank-lines',
-  transform(code: string, id: string) {
-    if (!id.endsWith('.md')) return null
-    if (!code.includes('<details')) return null
-    return code.replace(
-      /<details[\s\S]*?<\/details\s*>/g,
-      (match: string) => match.replace(/\n[ \t]*\n/g, '\n')
-    )
-  },
-}
-
 // ─── VitePress Config ─────────────────────────────────────────────────────────
 
 export default withMermaid(
@@ -161,12 +144,26 @@ export default withMermaid(
       },
     },
 
-    vite: {
-      plugins: [fixDetailsPlugin],
-    },
-
     markdown: {
       lineNumbers: false,
+      config: (md) => {
+        // Azure DevOps wiki files use raw <details> HTML with blank lines inside.
+        // markdown-it splits type-6 HTML blocks at blank lines, so the <div> that
+        // opens on one line and closes later is treated as separate blocks —
+        // leaving an unclosed element that Vue's compiler rejects.
+        //
+        // Fix: run a core rule AFTER 'normalize' but BEFORE 'block' (the step
+        // that runs html_block tokenization). Modifying state.src here means
+        // the block tokenizer sees no blank lines inside <details>…</details>,
+        // so the entire section becomes one continuous HTML block.
+        md.core.ruler.after('normalize', 'fix-details-blank-lines', (state) => {
+          if (!state.src.includes('<details')) return
+          state.src = state.src.replace(
+            /<details[\s\S]*?<\/details\s*>/g,
+            (match) => match.replace(/\n[ \t]*\n/g, '\n')
+          )
+        })
+      },
     },
 
     mermaid: {
