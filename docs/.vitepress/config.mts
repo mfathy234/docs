@@ -60,6 +60,23 @@ function generateSidebar() {
   return [...rootItems, ...groups]
 }
 
+// ─── Vite Plugin: fix Azure DevOps wiki HTML ──────────────────────────────────
+// markdown-it splits type-6 HTML blocks (like <details>) at blank lines, which
+// leaves <div> tags unclosed from Vue's template compiler perspective.
+// This plugin collapses blank lines inside every <details>...</details> block
+// before markdown-it processes the file, so the whole block is one HTML chunk.
+const fixDetailsPlugin = {
+  name: 'collapse-details-blank-lines',
+  transform(code: string, id: string) {
+    if (!id.endsWith('.md')) return null
+    if (!code.includes('<details')) return null
+    return code.replace(
+      /<details[\s\S]*?<\/details\s*>/g,
+      (match: string) => match.replace(/\n[ \t]*\n/g, '\n')
+    )
+  },
+}
+
 // ─── VitePress Config ─────────────────────────────────────────────────────────
 
 export default withMermaid(
@@ -142,6 +159,10 @@ export default withMermaid(
         level: [2, 3],
         label: 'On this page'
       },
+    },
+
+    vite: {
+      plugins: [fixDetailsPlugin],
     },
 
     markdown: {
